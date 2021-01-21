@@ -44,4 +44,7 @@ if app.BL_REMOTE_SHOP:
 	if app.BL_REMOTE_SHOP:
 		def OpenRemoteShop(self):
 			if self.wndRemoteShop:
-				self.wndRemoteShop.Show()
+				if self.wndRemoteShop.IsShowWindow():				
+					self.wndRemoteShop.Close()
+				else:
+					self.wndRemoteShop.Show()
