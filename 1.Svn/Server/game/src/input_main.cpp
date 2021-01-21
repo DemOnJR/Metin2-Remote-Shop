@@ -18,7 +18,7 @@ void CInputMain::RemoteShop(LPCHARACTER ch, const char* data)
 
 	const DWORD dwCurrentTime = get_dword_time(), dwLimitTime = ch->GetLastRemoteTime() + 15000; // 15 sec.
 	if (dwCurrentTime < dwLimitTime) {
-		ch->ChatPacket(CHAT_TYPE_INFO, "<RemoteShop> You have to wait %u sec.", max(1, (dwLimitTime - dwCurrentTime) / 1000));
+		ch->ChatPacket(CHAT_TYPE_INFO, "<RemoteShop> You have to wait %u sec.", MAX(1, (dwLimitTime - dwCurrentTime) / 1000));
 		return;
 	}
 
