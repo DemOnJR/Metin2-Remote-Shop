@@ -8,10 +8,6 @@ bool CPythonNetworkStream::SendExchangeExitPacket()
 #if defined(BL_REMOTE_SHOP)
 bool CPythonNetworkStream::SendRemoteShopPacket(BYTE bIndex)
 {
-	auto vShopNames = GetRemoteShopNames();
-	if (bIndex >= vShopNames->size())
-		return false;
-
 	TPacketCGRemoteShop p;
 	p.header = HEADER_CG_REMOTE_SHOP;
 	p.shop_index = bIndex;
