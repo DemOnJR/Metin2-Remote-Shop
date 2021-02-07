@@ -27,10 +27,7 @@ void CInputMain::RemoteShop(LPCHARACTER ch, const char* data)
 
 	//PREVENT_TRADE_WINDOW
 	if (ch->IsOpenSafebox() || ch->GetExchange() || ch->GetShopOwner() || ch->GetMyShop() || ch->IsCubeOpen())
-	{
-		ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("ґЩёҐ °Е·ЎГўАМ ї­ё°»уЕВїЎј­ґВ »уБЎ°Е·Ўё¦ ЗТјц °Ў ѕшЅАґПґЩ."));
 		return;
-	}
 	//END_PREVENT_TRADE_WINDOW
 
 	const DWORD dwCurrentTime = get_dword_time(), dwLimitTime = ch->GetLastRemoteTime() + 15000; // 15 sec.
