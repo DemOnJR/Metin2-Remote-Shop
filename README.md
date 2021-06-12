@@ -7,7 +7,7 @@
 
 > 1) locale/xx/remote_shop_names.txt
 
-> 2) Add npc vnums to input_main.cpp (_arrShopNpcVnum)
+> 2) Add npc vnums to input_main.cpp (_arrShopVnum)
 **npc vnum** = player.shop(npc_vnum)
 
 Special thanks to _**[Tatsumaru](https://metin2.dev/board/profile/15524-tatsumaru/)**_ for icons <3
